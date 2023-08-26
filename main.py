@@ -15,13 +15,13 @@ async def on_ready():
 async def on_message(message):
     global pinged
 
-    if message.channel.id == 1138145290218643476 and not pinged:
-        role = discord.utils.get(message.guild.roles, name='Free UGC Limited Game')
+    if message.channel.id == CHANNEL ID and not pinged:
+        role = discord.utils.get(message.guild.roles, name='ROLE TO PING')
         if role is not None:
-            await message.channel.send(f'{role.mention} NEW Free limited !')
+            await message.channel.send(f'{role.mention} Hello')
             pinged = True
             print(f"Message envoyé dans le channel : {message.channel.name}")
     else:
         pinged = False
 
-client.run('MTE0NDYyMzE2ODUxMDc3NTM0Ng.GmJP52.oDlKITVq8nFm78mwbPcadAdgj9UuCmOdgERIsk')
+client.run('BOT TOKEN')
