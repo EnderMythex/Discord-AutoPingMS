@@ -1,27 +1,24 @@
 import discord
+from discord.ext import commands
 
 intents = discord.Intents.default()
-intents.message_content = True
+bot = commands.Bot(command_prefix='!', intents=intents)
 
-client = discord.Client(intents=intents)
-
-pinged = False  # Variable pour garder une trace de l'état du ping
-
-@client.event
-async def on_ready():
-    print('Bot connecté')
-
-@client.event
+@bot.event
 async def on_message(message):
-    global pinged
+    if message.author == bot.user:
+        return  
 
-    if message.channel.id == CHANNEL ID and not pinged:
-        role = discord.utils.get(message.guild.roles, name='ROLE TO PING')
-        if role is not None:
-            await message.channel.send(f'{role.mention} Hello')
-            pinged = True
+    if message.channel.name == 'CHANNEL':
+        role = discord.utils.get(message.guild.roles, name="ROLE NAME") # modify it
+        if role:
+            await message.channel.send(f'{role.mention} MESSAGE') # modify it
+            await message.add_reaction('👍') 
+            await message.add_reaction('❤')
             print(f"Message envoyé dans le channel : {message.channel.name}")
-    else:
-        pinged = False
+        else:
+            await message.channel.send('Rôle non trouvé.')
 
-client.run('BOT TOKEN')
+    await bot.process_commands(message)
+
+bot.run('BOT TOKEN HERE') # modify it
