@@ -7,8 +7,8 @@ What the bot can do :
 - Ping only once per message
 - Fully customizable
 
-Works with all message types (Embed / Webhook) :
-
 ![image](https://github.com/EnderMythex/Discord-AutoPingMS/assets/102812268/5524fba8-33e9-42f2-9fab-6ff1ae86b8cd)
+
+Works with all message types (Embed / Webhook) :
 
 ![image](https://github.com/EnderMythex/Discord-AutoPingMS/assets/102812268/a6b8bf85-fe01-4150-b47c-279630f10c04)
