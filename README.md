@@ -1,7 +1,6 @@
 # V2 Discord-AutoPingMS
-A auto ping bot for discord message
-
 ![Capture d’écran 2024-02-13 153740](https://github.com/EnderMythex/Discord-AutoPingMS/assets/102812268/b8e2a576-7f13-40a0-9670-636838249ade)
+A auto ping bot for discord message
 
 What the bot can do :
 - Responds to the message it should ping
